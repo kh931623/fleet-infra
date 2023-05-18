@@ -5,7 +5,7 @@
 apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaConnector
 metadata:
-  name: my-source-connector
+  name: file-source-connector
   namespace: kafka
   labels:
     # The strimzi.io/cluster label identifies the KafkaConnect instance
@@ -16,6 +16,8 @@ metadata:
 spec:
   class: org.apache.kafka.connect.file.FileStreamSourceConnector
   tasksMax: 2
+  autoRestart:
+    enabled: true
   config:
     file: "/opt/kafka/LICENSE"
     topic: file-topic
