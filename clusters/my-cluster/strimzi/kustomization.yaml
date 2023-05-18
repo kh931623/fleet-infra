@@ -4,4 +4,5 @@ resources:
 - strimzi-operator.yaml
 - kafka-cluster.yaml
 - kafka-connect.yaml
+- file-topic.yaml
 - file-connector.yaml
