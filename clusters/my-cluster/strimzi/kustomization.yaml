@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - strimzi-operator.yaml
 - kafka-cluster.yaml
+- kafka-connect.yaml
