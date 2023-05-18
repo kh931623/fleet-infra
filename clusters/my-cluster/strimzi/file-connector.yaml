@@ -20,4 +20,4 @@ spec:
     enabled: true
   config:
     file: "/opt/kafka/LICENSE"
-    topic: my-topic
+    topic: file-topic
