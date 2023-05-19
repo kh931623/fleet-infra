@@ -46,5 +46,5 @@ spec:
         artifacts:
           - type: maven
             group: io.debezium
-            artifact: io.debezium
+            artifact: debezium-connector-postgres
             version: 2.2.1
