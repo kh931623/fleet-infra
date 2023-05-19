@@ -42,3 +42,9 @@ spec:
             group: org.apache.kafka
             artifact: connect-file
             version: 3.4.0
+      - name: debezium-pg-source
+        artifacts:
+          - type: maven
+            group: io.debezium
+            artifact: io.debezium
+            version: 2.2.1
