@@ -44,5 +44,7 @@ spec:
             version: 3.4.0
       - name: debezium-pg-source
         artifacts:
-          - type: tgz
-            artifact: https://repo1.maven.org/maven2/io/debezium/debezium-connector-postgres/2.2.1.Final/debezium-connector-postgres-2.2.1.Final-plugin.tar.gz
+          - type: maven
+            group: io.debezium
+            artifact: debezium-connector-postgres
+            version: 2.2.1
