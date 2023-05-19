@@ -42,9 +42,13 @@ spec:
             group: org.apache.kafka
             artifact: connect-file
             version: 3.4.0
-      - name: debezium-pg-source
+      # - name: debezium-pg-source
+      #   artifacts:
+      #     - type: maven
+      #       group: io.debezium
+      #       artifact: debezium-connector-postgres
+      #       version: 2.2.1
+      - name: debezium-pg-source-tgz
         artifacts:
-          - type: maven
-            group: io.debezium
-            artifact: debezium-connector-postgres
-            version: 2.2.1
+          - type: tgz
+            url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-postgres/2.2.1.Final/debezium-connector-postgres-2.2.1.Final-plugin.tar.gz
