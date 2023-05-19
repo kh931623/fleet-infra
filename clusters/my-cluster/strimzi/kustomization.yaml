@@ -6,3 +6,4 @@ resources:
 - kafka-connect.yaml
 - file-topic.yaml
 - file-connector.yaml
+- local-pg-connector.yaml
