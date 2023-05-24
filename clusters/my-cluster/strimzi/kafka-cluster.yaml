@@ -39,5 +39,3 @@ spec:
   entityOperator:
     topicOperator: {}
     userOperator: {}
-  dependsOn:
-    - name: strimzi-operator
