@@ -22,7 +22,7 @@ spec:
         - name: KAFKA_CLUSTERS_0_NAME
           value: my-cluster
         - name: KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS
-          value: my-cluster-kafka-bootstrap:9093
+          value: my-cluster-kafka-bootstrap:9092
         imagePullPolicy: Always
         resources:
           requests:
