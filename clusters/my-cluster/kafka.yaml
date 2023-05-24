@@ -31,3 +31,39 @@ spec:
   path: ./infra/kafka-cluster
   prune: true
   wait: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: kafka-connect
+  namespace: flux-system
+spec:
+  interval: 1m
+  retryInterval: 1m
+  timeout: 5m
+  dependsOn:
+    - name: kafka-cluster
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infra/kafka-connect
+  prune: true
+  wait: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: kafka-ui
+  namespace: flux-system
+spec:
+  interval: 1m
+  retryInterval: 1m
+  timeout: 5m
+  dependsOn:
+    - name: kafka-cluster
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infra/kafka-ui
+  prune: true
+  wait: true
