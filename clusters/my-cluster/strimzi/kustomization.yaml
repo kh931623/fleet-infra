@@ -3,22 +3,31 @@ kind: Kustomization
 metadata:
   name: strimzi-operator
   namespace: kafka
-resources:
-- strimzi-operator.yaml
-# - kafka-cluster.yaml
-# - kafka-connect.yaml
-# - kafka-ui.yaml
-# - file-topic.yaml
-# - file-connector.yaml
-# - local-pg-connector.yaml
+spec:
+  interval: 1m
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infra/strimzi
+  prune: true
+  wait: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: kafka-cluster
   namespace: kafka
-resources:
-  - kafka-cluster.yaml
 spec:
+  interval: 1m
+  retryInterval: 1m
+  timeout: 5m
   dependsOn:
     - name: strimzi-operator
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infra/kafka-cluster
+  prune: true
+  wait: true
