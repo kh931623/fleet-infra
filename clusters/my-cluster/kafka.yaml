@@ -67,3 +67,21 @@ spec:
   path: ./infra/kafka-ui
   prune: true
   wait: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: kafka-connectors
+  namespace: flux-system
+spec:
+  interval: 1m
+  retryInterval: 1m
+  timeout: 5m
+  dependsOn:
+    - name: kafka-connect
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infra/kafka-connectors
+  prune: true
+  wait: true
