@@ -13,7 +13,7 @@ spec:
   config:
     tasks.max: 1
     plugin.name: pgoutput
-    slot.name: debezium_dev
+    slot.name: simon_dev_connector
     database.hostname: host.minikube.internal
     database.port: 5432
     database.user: pickupp
