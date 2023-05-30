@@ -27,6 +27,8 @@ spec:
           value: connect
         - name: KAFKA_CLUSTERS_0_KAFKACONNECT_0_ADDRESS
           value: http://my-connect-cluster-connect-api:8083
+        - name: KAFKA_CLUSTERS_0_SCHEMAREGISTRY
+          value: http://schema-registry:8081
         imagePullPolicy: Always
         resources:
           requests:
