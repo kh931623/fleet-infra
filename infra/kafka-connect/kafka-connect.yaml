@@ -12,10 +12,10 @@ spec:
   version: 3.4.0
   replicas: 1
   bootstrapServers: my-cluster-kafka-bootstrap:9093
-  logging:
-    type: inline
-    loggers:
-      connect.root.logger.level: "DEBUG"
+  # logging:
+  #   type: inline
+  #   loggers:
+  #     connect.root.logger.level: "DEBUG"
   tls:
     trustedCertificates:
       - secretName: my-cluster-cluster-ca-cert
@@ -26,6 +26,8 @@ spec:
     config.storage.topic: connect-cluster-configs
     status.storage.topic: connect-cluster-status
     # -1 means it will use the default replication factor configured in the broker
+    key.converter.schemas.enable: true
+    value.converter.schemas.enable: true
     config.storage.replication.factor: -1
     offset.storage.replication.factor: -1
     status.storage.replication.factor: -1
