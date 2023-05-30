@@ -20,5 +20,23 @@ spec:
     database.password: ""
     database.dbname: dev
     topic.prefix: postgres.local
-    schema.exclude.list: public
-    table.exclude.list: "\\w+\\._prisma_migrations,\\w+\\.goose_db_version,\\w+\\.SequelizeMeta"
+    schema.include.list: "agent"
+    # schema.exclude.list: public
+    # table.exclude.list: "\\w+\\._prisma_migrations,\\w+\\.goose_db_version,\\w+\\.SequelizeMeta"
+    key.converter: "io.confluent.connect.avro.AvroConverter"
+    key.converter.schema.registry.url: http://schema-registry:8081
+    value.converter: "io.confluent.connect.avro.AvroConverter"
+    value.converter.schema.registry.url: http://schema-registry:8081
+    # transforms: "changeTopicCase,fixChangeTopicCase,Reroute,changeValueCase"
+    # transforms.changeTopicCase.type: "com.github.jcustenborder.kafka.connect.transform.common.ChangeTopicCase"
+    # transforms.changeTopicCase.from: "UPPER_CAMEL"
+    # transforms.changeTopicCase.to: "LOWER_UNDERSCORE"
+    # transforms.fixChangeTopicCase.type: "org.apache.kafka.connect.transforms.RegexRouter"
+    # transforms.fixChangeTopicCase.regex: "(\\w+)\\.(\\w+)\\.(\\w+)\\._(\\w+)"
+    # transforms.fixChangeTopicCase.replacement: "$1.$2.$3.$4"
+    # transforms.Reroute.type: "io.debezium.transforms.ByLogicalTableRouter"
+    # transforms.Reroute.topic.regex: "(\\w+)\\.\\w+\\.(\\w+)\\.(\\w+)"
+    # transforms.Reroute.topic.replacement: "$1.$2.$3"
+    # transforms.changeValueCase.type: "com.github.jcustenborder.kafka.connect.transform.common.ChangeCase$Value"
+    # transforms.changeValueCase.from: "LOWER_CAMEL"
+    # transforms.changeValueCase.to: "LOWER_UNDERSCORE"
