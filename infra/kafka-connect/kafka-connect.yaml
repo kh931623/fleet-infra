@@ -12,10 +12,10 @@ spec:
   version: 3.4.0
   replicas: 1
   bootstrapServers: my-cluster-kafka-bootstrap:9093
-  # logging:
-  #   type: inline
-  #   loggers:
-  #     connect.root.logger.level: "DEBUG"
+  logging:
+    type: inline
+    loggers:
+      connect.root.logger.level: "INFO"
   tls:
     trustedCertificates:
       - secretName: my-cluster-cluster-ca-cert
