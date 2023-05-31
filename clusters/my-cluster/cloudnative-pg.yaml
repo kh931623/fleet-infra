@@ -13,3 +13,21 @@ spec:
   path: ./infra/cloudnative-pg
   prune: true
   wait: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: pg-cluster
+  namespace: flux-system
+spec:
+  interval: 1m
+  retryInterval: 1m
+  timeout: 5m
+  dependsOn:
+    - name: cloudnative-pg-operator
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infra/postgres-cluster
+  prune: true
+  wait: true
