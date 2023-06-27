@@ -72,3 +72,10 @@ spec:
             group: com.github.jcustenborder.kafka.connect
             artifact: kafka-connect-transform-common
             version: 0.1.0.14
+      - name: confluent-jdbc-connector
+        artifacts:
+          - type: maven
+            group: io.confluent
+            repository: https://packages.confluent.io/maven
+            artifact: kafka-connect-jdbc
+            version: 10.7.0
