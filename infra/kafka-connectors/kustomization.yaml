@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
   - file-connector.yaml
   - local-pg-connector.yaml
+  - jdbc-sink-connector.yaml
   # - dev-pg-connector.yaml
