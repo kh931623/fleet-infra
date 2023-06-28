@@ -13,6 +13,9 @@ spec:
   #               the switchover of the primary
   primaryUpdateStrategy: unsupervised
 
+  superuserSecret:
+    name: pg-super-user-password
+
   # Require 1Gi of space
   storage:
     size: 1Gi
