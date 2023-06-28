@@ -14,7 +14,7 @@ spec:
   primaryUpdateStrategy: unsupervised
 
   superuserSecret:
-    name: pg-super-user-password
+    name: pg-super-user-creds
 
   # Require 1Gi of space
   storage:
