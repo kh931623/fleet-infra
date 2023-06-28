@@ -16,6 +16,13 @@ spec:
   superuserSecret:
     name: pg-super-user-creds
 
+  bootstrap:
+    initdb:
+      database: app
+      owner: pickupp
+      secret:
+        name: app-secret
+
   # Require 1Gi of space
   storage:
     size: 1Gi
