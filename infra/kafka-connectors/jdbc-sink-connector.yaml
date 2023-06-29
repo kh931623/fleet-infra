@@ -12,9 +12,9 @@ spec:
     enabled: true
   config:
     tasks.max: 1
-    connection.url: jdbc:postgresql://host.minikube.internal:58388/app
-    connection.user: pickupp
-    connection.password: app
+    connection.url: jdbc:postgresql://host.minikube.internal:58388/postgres
+    connection.user: postgres
+    connection.password: admin
     # topics: postgres.agent.crews
     topics.regex: postgres\.agent.*
     key.converter: "io.confluent.connect.avro.AvroConverter"
