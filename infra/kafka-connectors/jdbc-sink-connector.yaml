@@ -24,3 +24,7 @@ spec:
     transforms: unwrap
     transforms.unwrap.type: io.debezium.transforms.ExtractNewRecordState
     auto.create: true
+    auto.evolve: true
+    insert.mode: upsert
+    pk.mode: record_key
+    pk.fields: id
