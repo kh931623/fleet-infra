@@ -22,7 +22,7 @@ spec:
     topic.prefix: postgres.local
     schema.include.list: "agent"
     # schema.exclude.list: public
-    # table.exclude.list: "\\w+\\._prisma_migrations,\\w+\\.goose_db_version,\\w+\\.SequelizeMeta"
+    table.exclude.list: "\\w+\\._prisma_migrations,\\w+\\.goose_db_version,\\w+\\.SequelizeMeta"
     key.converter: "io.confluent.connect.avro.AvroConverter"
     key.converter.schema.registry.url: http://schema-registry:8081
     value.converter: "io.confluent.connect.avro.AvroConverter"
