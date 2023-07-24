@@ -21,12 +21,12 @@ spec:
     key.converter.schema.registry.url: http://schema-registry:8081
     value.converter: "io.confluent.connect.avro.AvroConverter"
     value.converter.schema.registry.url: http://schema-registry:8081
-    transforms: unwrap,topicNameChange
+    transforms: "unwrap,topicNameChange"
     transforms.unwrap.type: io.debezium.transforms.ExtractNewRecordState
     transforms.unwrap.drop.tombstones: false
     transforms.topicNameChange.type: "org.apache.kafka.connect.transforms.RegexRouter"
-    transforms.topicNameChange.topic.regex: (\w+)\.(\w+)\.(\w+)
-    transforms.topicNameChange.topic.replacement: $2\$$3
+    transforms.topicNameChange.topic.regex: "(\\w+)\\.(\\w+)\\.(\\w+)"
+    transforms.topicNameChange.topic.replacement: "$2_$3"
     delete.enabled: true
     auto.create: true
     auto.evolve: true
