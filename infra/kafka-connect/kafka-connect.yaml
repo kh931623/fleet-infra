@@ -60,6 +60,10 @@ spec:
           - type: tgz
             url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-postgres/2.2.1.Final/debezium-connector-postgres-2.2.1.Final-plugin.tar.gz
             sha512sum: 0bcb0e99f1beba4351fbd18962fee364663fc58914eae302c0dd2a52b8fbefd2a5ec10da909fd0f49207293d5c86f90ec7c0a6c90947c97285ea61f229acdaeb
+      - name: debezium-jdbc-sink-tgz
+        artifacts:
+          - type: tgz
+            url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-jdbc/2.3.0.Final/debezium-connector-jdbc-2.3.0.Final-plugin.tar.gz
       # - name: debezium-pg-connector
       #   artifacts:
       #     - type: maven
