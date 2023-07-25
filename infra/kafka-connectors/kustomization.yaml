@@ -4,5 +4,5 @@ resources:
   - file-connector.yaml
   # - local-pg-connector.yaml
   - jdbc-sink-connector.yaml
-  - local-pg-orders-connector
+  - local-pg-orders-connector.yaml
   # - dev-pg-connector.yaml
