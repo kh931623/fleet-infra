@@ -16,7 +16,7 @@ spec:
     connection.user: pickupp
     connection.password: app
     # topics: postgres.agent.crews
-    topics.regex: postgres\.agent.*
+    topics.regex: postgres\..*
     key.converter: "io.confluent.connect.avro.AvroConverter"
     key.converter.schema.registry.url: http://schema-registry:8081
     value.converter: "io.confluent.connect.avro.AvroConverter"
