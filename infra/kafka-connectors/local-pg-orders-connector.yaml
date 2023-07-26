@@ -24,7 +24,7 @@ spec:
     # schema.exclude.list: public
     # table.exclude.list: "\\w+\\._prisma_migrations,\\w+\\.goose_db_version,\\w+\\.SequelizeMeta"
     table.include.list: "order.orders,order.trips"
-    decimal.handling.mode: string
+    decimal.handling.mode: double
     key.converter: "io.confluent.connect.avro.AvroConverter"
     key.converter.schema.registry.url: http://schema-registry:8081
     value.converter: "io.confluent.connect.avro.AvroConverter"
