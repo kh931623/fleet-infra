@@ -12,7 +12,7 @@ spec:
     enabled: true
   config:
     tasks.max: 1
-    connection.url: jdbc:postgresql://host.minikube.internal:51237/app
+    connection.url: jdbc:postgresql://host.minikube.internal:62641/app
     connection.username: pickupp
     connection.password: app
     # topics: postgres.agent.crews
