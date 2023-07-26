@@ -33,3 +33,4 @@ spec:
     insert.mode: upsert
     pk.mode: record_key
     pk.fields: id
+    table.name.format: jdbc_${topic}

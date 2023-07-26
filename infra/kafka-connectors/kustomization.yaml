@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - file-connector.yaml
   # - local-pg-connector.yaml
-  # - jdbc-sink-connector.yaml
+  - jdbc-sink-connector.yaml
   - debezium-jdbc-sink.yaml
   - local-pg-orders-connector.yaml
   # - dev-pg-connector.yaml
