@@ -1,0 +1,109 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: uat-ssh-cred
+stringData:
+  k8s_new: |
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    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
+    -----END OPENSSH PRIVATE KEY-----
+  config: |
+    Host ssh.k8s-dev.pickupp-devops.net
+      IdentitiesOnly yes
+      IdentityFile ~/.ssh/k8s-new
+      Port 22
+      User pickupp
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ssh-tunnel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ssh-tunnel
+  template:
+    metadata:
+      labels:
+        app: ssh-tunnel
+    spec:
+      containers:
+      - name: ssh-tunnel
+        image: "kooldev/tunnel"
+        ports:
+          - containerPort: 3307
+        env:
+          - name: TUNNEL_SSH_USER
+            value: pickupp
+          - name: TUNNEL_SSH_HOST
+            value: ssh.k8s-dev.pickupp-devops.net
+          - name: TUNNEL_TARGET_HOST
+            value: pickupp-dev-12-aurora.cluster-c4tut00agkr8.ap-southeast-1.rds.amazonaws.com
+          - name: TUNNEL_TARGET_PORT
+            value: 5432
+          - name: TUNNEL_LISTEN
+            value: 3307
+        volumeMounts:
+          - name: ssh-cred
+            mountPath: "/root/.ssh"
+      volumes:
+        - name: ssh-cred
+          secret: uat-ssh-cred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ssh-tunnel
+spec:
+  selector:
+    app: ssh-tunnel
+  ports:
+  - port: 3307
+    targetPort: 3307
