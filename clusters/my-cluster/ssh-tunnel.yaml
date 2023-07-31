@@ -87,9 +87,9 @@ spec:
           - name: TUNNEL_TARGET_HOST
             value: pickupp-dev-12-aurora.cluster-c4tut00agkr8.ap-southeast-1.rds.amazonaws.com
           - name: TUNNEL_TARGET_PORT
-            value: 5432
+            value: "5432"
           - name: TUNNEL_LISTEN
-            value: 3307
+            value: "3307"
         volumeMounts:
           - name: ssh-cred
             mountPath: "/root/.ssh"
