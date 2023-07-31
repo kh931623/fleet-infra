@@ -57,7 +57,7 @@ stringData:
   config: |
     Host ssh.k8s-dev.pickupp-devops.net
       IdentitiesOnly yes
-      IdentityFile ~/.ssh/k8s-new
+      IdentityFile ~/.ssh/k8s_new
       Port 22
       User pickupp
 ---
