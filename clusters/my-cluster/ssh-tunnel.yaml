@@ -95,7 +95,8 @@ spec:
             mountPath: "/root/.ssh"
       volumes:
         - name: ssh-cred
-          secret: uat-ssh-cred
+          secret: 
+            secretName: uat-ssh-cred
 ---
 apiVersion: v1
 kind: Service
