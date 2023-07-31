@@ -95,6 +95,7 @@ spec:
         volumeMounts:
           - name: ssh-cred
             mountPath: "/root/.ssh"
+            readOnly: true
       volumes:
         - name: ssh-cred
           secret: 
