@@ -6,4 +6,5 @@ resources:
   - jdbc-sink-connector.yaml
   - debezium-jdbc-sink.yaml
   - local-pg-orders-connector.yaml
+  - local-pg-orders-photos-connector.yaml
   # - dev-pg-connector.yaml

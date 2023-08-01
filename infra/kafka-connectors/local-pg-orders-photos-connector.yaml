@@ -1,7 +1,7 @@
 apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaConnector
 metadata:
-  name: local-pg-orders-connector-2
+  name: local-pg-orders-photos-connector
   namespace: kafka
   labels:
     strimzi.io/cluster: my-connect-cluster
@@ -13,7 +13,7 @@ spec:
   config:
     tasks.max: 1
     plugin.name: pgoutput
-    slot.name: debezium_dev_3
+    slot.name: debezium_dev_4
     database.hostname: host.minikube.internal
     database.port: 5432
     database.user: pickupp
@@ -23,7 +23,7 @@ spec:
     # schema.include.list: "agent"
     # schema.exclude.list: public
     # table.exclude.list: "\\w+\\._prisma_migrations,\\w+\\.goose_db_version,\\w+\\.SequelizeMeta"
-    table.include.list: "order.orders,order.trips"
+    table.include.list: "order.photos"
     decimal.handling.mode: double
     key.converter: "io.confluent.connect.avro.AvroConverter"
     key.converter.schema.registry.url: http://schema-registry:8081
